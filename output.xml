@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.12.0 on win32)" generated="20231127 13:02:52.855" rpa="false" schemaversion="4">
+<suite id="s1" name="DailyQMA bdd" source="F:\!Belajar\Robot\robotframeworkqma\tests\DailyQMA_bdd.robot">
+<test id="s1-t1" name="Insert Daily QMA" line="7">
+<kw name="Given I am on login page">
+<kw name="Open My Browser" library="login_resources">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${QMA_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231127 13:02:53.156" level="INFO">Opening browser 'chrome' to base url 'https://testingqa-office.nexcloud.id/testingqa/automation/webui/login'.</msg>
+<status status="PASS" starttime="20231127 13:02:53.156" endtime="20231127 13:02:56.859"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20231127 13:02:56.859" endtime="20231127 13:02:56.979"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Nex</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20231127 13:02:56.995" level="INFO">Current page contains text 'Nex'.</msg>
+<status status="PASS" starttime="20231127 13:02:56.979" endtime="20231127 13:02:56.995"/>
+</kw>
+<status status="PASS" starttime="20231127 13:02:53.156" endtime="20231127 13:02:56.995"/>
+</kw>
+<status status="PASS" starttime="20231127 13:02:53.156" endtime="20231127 13:02:56.995"/>
+</kw>
+<kw name="And I will insert my username and password">
+<kw name="Input Username" library="login_resources">
+<arg>daniel</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${TEXTFIELD_USERNAME}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231127 13:02:57.003" level="INFO">Typing text 'daniel' into text field 'username'.</msg>
+<status status="PASS" starttime="20231127 13:02:56.995" endtime="20231127 13:02:57.166"/>
+</kw>
+<status status="PASS" starttime="20231127 13:02:56.995" endtime="20231127 13:02:57.166"/>
+</kw>
+<kw name="Input Password" library="login_resources">
+<arg>daniel202103003</arg>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>${TEXTFIELD_PASSWORD}</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20231127 13:02:57.176" level="INFO">Typing password into text field 'password'.</msg>
+<msg timestamp="20231127 13:02:57.217" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20231127 13:02:57.308" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20231127 13:02:57.174" endtime="20231127 13:02:57.308"/>
+</kw>
+<status status="PASS" starttime="20231127 13:02:57.166" endtime="20231127 13:02:57.308"/>
+</kw>
+<status status="PASS" starttime="20231127 13:02:56.995" endtime="20231127 13:02:57.308"/>
+</kw>
+<kw name="And I click login button">
+<kw name="Click Login Button" library="login_resources">
+<kw name="Sleep" library="BuiltIn">
+<arg>${TIMEOUT}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231127 13:02:58.313" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20231127 13:02:57.312" endtime="20231127 13:02:58.313"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${BUTTON_LOGIN}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231127 13:02:58.313" level="INFO">Clicking button 'Log in'.</msg>
+<status status="PASS" starttime="20231127 13:02:58.313" endtime="20231127 13:02:58.404"/>
+</kw>
+<status status="PASS" starttime="20231127 13:02:57.312" endtime="20231127 13:02:58.404"/>
+</kw>
+<kw name="Verify Success Login" library="login_resources">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>name</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231127 13:02:58.404" endtime="20231127 13:02:59.411"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Daniel</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20231127 13:02:59.430" level="INFO">Current page contains text 'Daniel'.</msg>
+<status status="PASS" starttime="20231127 13:02:59.411" endtime="20231127 13:02:59.430"/>
+</kw>
+<status status="PASS" starttime="20231127 13:02:58.404" endtime="20231127 13:02:59.430"/>
+</kw>
+<status status="PASS" starttime="20231127 13:02:57.312" endtime="20231127 13:02:59.430"/>
+</kw>
+<kw name="Then I open menu my daily tracker">
+<kw name="Open Menu Daily" library="mytracker_resources">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${BUTTON_INSIGHT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231127 13:02:59.430" level="INFO">Clicking element '//body[1]/div[1]/div[6]/label[1]'.</msg>
+<status status="PASS" starttime="20231127 13:02:59.430" endtime="20231127 13:02:59.497"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${BUTTON_MY_TRACKER}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231127 13:02:59.497" level="INFO">Clicking element '//a[@id='myTrackerItem']'.</msg>
+<status status="PASS" starttime="20231127 13:02:59.497" endtime="20231127 13:03:00.068"/>
+</kw>
+<kw name="Select Frame" library="SeleniumLibrary">
+<arg>//iframe[contains(@src,/testingqa/automation/webui/home/insights/checkins)]</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<msg timestamp="20231127 13:03:00.072" level="INFO">Selecting frame '//iframe[contains(@src,/testingqa/automation/webui/home/insights/checkins)]'.</msg>
+<status status="PASS" starttime="20231127 13:03:00.068" endtime="20231127 13:03:00.162"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${BUTTON_ADD_DAILY}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20231127 13:03:00.201" level="INFO">Current page contains element '//button[@id='buttonAdd']'.</msg>
+<status status="PASS" starttime="20231127 13:03:00.162" endtime="20231127 13:03:00.201"/>
+</kw>
+<status status="PASS" starttime="20231127 13:02:59.430" endtime="20231127 13:03:00.201"/>
+</kw>
+<status status="PASS" starttime="20231127 13:02:59.430" endtime="20231127 13:03:00.201"/>
+</kw>
+<kw name="And I will insert my daily task">
+<kw name="Insert Daily" library="mytracker_resources">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${BUTTON_ADD_DAILY}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231127 13:03:00.209" level="INFO">Clicking button '//button[@id='buttonAdd']'.</msg>
+<status status="PASS" starttime="20231127 13:03:00.208" endtime="20231127 13:03:00.397"/>
+</kw>
+<kw name="Insert CheckIn Date" library="mytracker_resources">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${TEXTFIELD_DATE}</arg>
+<arg>${VALUE_CHECKIN_DATE}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231127 13:03:00.397" level="INFO">Typing text '16/01/2022' into text field '//input[@id='checkinDate']'.</msg>
+<status status="PASS" starttime="20231127 13:03:00.397" endtime="20231127 13:03:00.597"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${TIMEOUT}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231127 13:03:01.597" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20231127 13:03:00.597" endtime="20231127 13:03:01.597"/>
+</kw>
+<status status="PASS" starttime="20231127 13:03:00.397" endtime="20231127 13:03:01.597"/>
+</kw>
+<kw name="Select Mood" library="mytracker_resources">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${DROPDOWN_MOOD}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231127 13:03:01.597" level="INFO">Clicking element '//select[@id='moodID']'.</msg>
+<status status="PASS" starttime="20231127 13:03:01.597" endtime="20231127 13:03:01.760"/>
+</kw>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<arg>${DROPDOWN_MOOD}</arg>
+<arg>${VALUE_MOOD_AWESOME}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<msg timestamp="20231127 13:03:01.769" level="INFO">Selecting options from selection list '//select[@id='moodID']' by value 1.</msg>
+<status status="PASS" starttime="20231127 13:03:01.760" endtime="20231127 13:03:01.936"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${TIMEOUT}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231127 13:03:02.938" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20231127 13:03:01.937" endtime="20231127 13:03:02.938"/>
+</kw>
+<status status="PASS" starttime="20231127 13:03:01.597" endtime="20231127 13:03:02.938"/>
+</kw>
+<kw name="Select Status" library="mytracker_resources">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${DROPDOWN_STATUS}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231127 13:03:02.938" level="INFO">Clicking element '//select[@id='statusID']'.</msg>
+<status status="PASS" starttime="20231127 13:03:02.938" endtime="20231127 13:03:03.099"/>
+</kw>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<arg>${DROPDOWN_STATUS}</arg>
+<arg>${VALUE_STATUS_WFO}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<msg timestamp="20231127 13:03:03.099" level="INFO">Selecting options from selection list '//select[@id='statusID']' by value 1.</msg>
+<status status="PASS" starttime="20231127 13:03:03.099" endtime="20231127 13:03:03.263"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${TIMEOUT}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231127 13:03:04.264" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20231127 13:03:03.263" endtime="20231127 13:03:04.264"/>
+</kw>
+<status status="PASS" starttime="20231127 13:03:02.938" endtime="20231127 13:03:04.264"/>
+</kw>
+<kw name="Select Project" library="mytracker_resources">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${DROPDOWN_PROJECT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231127 13:03:04.265" level="INFO">Clicking element '//select[@id='projectID']'.</msg>
+<status status="PASS" starttime="20231127 13:03:04.265" endtime="20231127 13:03:04.448"/>
+</kw>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<arg>${DROPDOWN_PROJECT}</arg>
+<arg>${VALUE_PROJECT_NEXMILE}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<msg timestamp="20231127 13:03:04.448" level="INFO">Selecting options from selection list '//select[@id='projectID']' by value 22.</msg>
+<status status="PASS" starttime="20231127 13:03:04.448" endtime="20231127 13:03:04.535"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${TIMEOUT}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231127 13:03:05.536" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20231127 13:03:04.535" endtime="20231127 13:03:05.536"/>
+</kw>
+<status status="PASS" starttime="20231127 13:03:04.264" endtime="20231127 13:03:05.536"/>
+</kw>
+<kw name="Select Form" library="mytracker_resources">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${DROPDOWN_FORM}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231127 13:03:05.536" level="INFO">Clicking element '//select[@id='contextID']'.</msg>
+<status status="PASS" starttime="20231127 13:03:05.536" endtime="20231127 13:03:05.755"/>
+</kw>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<arg>${DROPDOWN_FORM}</arg>
+<arg>${VALUE_FORM_DAILY}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<msg timestamp="20231127 13:03:05.755" level="INFO">Selecting options from selection list '//select[@id='contextID']' by value 1.</msg>
+<status status="PASS" starttime="20231127 13:03:05.755" endtime="20231127 13:03:05.910"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${TIMEOUT}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231127 13:03:06.912" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20231127 13:03:05.911" endtime="20231127 13:03:06.912"/>
+</kw>
+<status status="PASS" starttime="20231127 13:03:05.536" endtime="20231127 13:03:06.912"/>
+</kw>
+<kw name="Insert Yesterday Task" library="mytracker_resources">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${TEXTFIELD_YESTERDAY_TASK}</arg>
+<arg>${VALUE_YESTERDAY_TASK}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231127 13:03:06.912" level="INFO">Typing text 'Insert Daily 
+ Click Button 
+ asdasdasd' into text field '//div[@id="answersContainer"]/div[3]'.</msg>
+<status status="PASS" starttime="20231127 13:03:06.912" endtime="20231127 13:03:07.097"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${TIMEOUT}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231127 13:03:08.097" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20231127 13:03:07.097" endtime="20231127 13:03:08.097"/>
+</kw>
+<status status="PASS" starttime="20231127 13:03:06.912" endtime="20231127 13:03:08.097"/>
+</kw>
+<kw name="Insert Today Task" library="mytracker_resources">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${TEXTFIELD_TODAY_TASK}</arg>
+<arg>${VALUE_TODAY_TASK}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231127 13:03:08.097" level="INFO">Typing text 'Nexmile' into text field '//div[@id="answersContainer"]/div[5]'.</msg>
+<status status="PASS" starttime="20231127 13:03:08.097" endtime="20231127 13:03:08.240"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${TIMEOUT}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231127 13:03:09.241" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20231127 13:03:08.240" endtime="20231127 13:03:09.241"/>
+</kw>
+<status status="PASS" starttime="20231127 13:03:08.097" endtime="20231127 13:03:09.241"/>
+</kw>
+<kw name="Insert Blocker Task" library="mytracker_resources">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${TEXTFIELD_BLOCKER_TASK}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20231127 13:03:09.241" endtime="20231127 13:03:09.586"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${TEXTFIELD_BLOCKER_TASK}</arg>
+<arg>${VALUE_BLOCKER_TASK}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231127 13:03:09.586" level="INFO">Typing text 'Tidak ada' into text field '//div[@id="answersContainer"]/div[7]'.</msg>
+<status status="PASS" starttime="20231127 13:03:09.586" endtime="20231127 13:03:09.773"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${TIMEOUT}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231127 13:03:10.774" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20231127 13:03:09.773" endtime="20231127 13:03:10.774"/>
+</kw>
+<status status="PASS" starttime="20231127 13:03:09.241" endtime="20231127 13:03:10.774"/>
+</kw>
+<kw name="Click Submit Daily" library="mytracker_resources">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${BUTTON_SUBMIT}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20231127 13:03:10.774" endtime="20231127 13:03:11.159"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${BUTTON_SUBMIT}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231127 13:03:11.159" level="INFO">Clicking button '//button[@id='buttonSubmit']'.</msg>
+<status status="PASS" starttime="20231127 13:03:11.159" endtime="20231127 13:03:11.305"/>
+</kw>
+<status status="PASS" starttime="20231127 13:03:10.774" endtime="20231127 13:03:11.305"/>
+</kw>
+<kw name="Verify Success Submit Daily" library="mytracker_resources">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${POPUP_SUCCESS}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231127 13:03:11.306" endtime="20231127 13:03:11.583"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>${MESSAGE_SUCCESS}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20231127 13:03:11.705" level="INFO">Current page contains text 'Hooray! Sent successfully!'.</msg>
+<status status="PASS" starttime="20231127 13:03:11.583" endtime="20231127 13:03:11.705"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${TIMEOUT}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231127 13:03:12.706" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20231127 13:03:11.705" endtime="20231127 13:03:12.706"/>
+</kw>
+<status status="PASS" starttime="20231127 13:03:11.305" endtime="20231127 13:03:12.706"/>
+</kw>
+<kw name="Click Logout Button" library="login_resources">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>//body/div[1]/div[13]/label[1]</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20231127 13:03:12.706" endtime="20231127 13:03:13.022"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//body/div[1]/div[13]/label[1]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231127 13:03:13.024" level="INFO">Clicking element '//body/div[1]/div[13]/label[1]'.</msg>
+<status status="PASS" starttime="20231127 13:03:13.022" endtime="20231127 13:03:13.101"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${TIMEOUT}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231127 13:03:14.104" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20231127 13:03:13.101" endtime="20231127 13:03:14.104"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//a[contains(text(),'Log out')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231127 13:03:14.104" level="INFO">Clicking element '//a[contains(text(),'Log out')]'.</msg>
+<status status="PASS" starttime="20231127 13:03:14.104" endtime="20231127 13:03:14.210"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${TIMEOUT}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231127 13:03:15.211" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20231127 13:03:14.210" endtime="20231127 13:03:15.211"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>confirmLogout</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231127 13:03:15.212" level="INFO">Clicking button 'confirmLogout'.</msg>
+<status status="PASS" starttime="20231127 13:03:15.211" endtime="20231127 13:03:15.416"/>
+</kw>
+<status status="PASS" starttime="20231127 13:03:12.706" endtime="20231127 13:03:15.416"/>
+</kw>
+<kw name="Close Browser" library="login_resources">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20231127 13:03:15.417" endtime="20231127 13:03:17.674"/>
+</kw>
+<status status="PASS" starttime="20231127 13:03:15.416" endtime="20231127 13:03:17.674"/>
+</kw>
+<status status="PASS" starttime="20231127 13:03:00.201" endtime="20231127 13:03:17.674"/>
+</kw>
+<status status="PASS" starttime="20231127 13:03:00.201" endtime="20231127 13:03:17.674"/>
+</kw>
+<status status="PASS" starttime="20231127 13:02:53.156" endtime="20231127 13:03:17.674"/>
+</test>
+<status status="PASS" starttime="20231127 13:02:52.855" endtime="20231127 13:03:17.674"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="DailyQMA bdd">DailyQMA bdd</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

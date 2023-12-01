@@ -17,10 +17,10 @@ Login
     Input Username    ${UserNAMEs}
     login_resources.Input Password    ${Psswrd}
     Click Login Button
-    ${LoggedIn}    Run Keyword And Return Status    Verify Success Login
+    ${LoggedIn}    Run Keyword And Return Status    Verify Success Login    #jika false pasti akan menghasilkan screenshoot
     Run Keyword If    ${LoggedIn} == True    
     ...        Verify Success Login
-    ...    ELSE
+    ...    ELSE IF    ${LoggedIn} == False
     ...        Verify Invalid Login
     Run Keyword If    ${LoggedIn} == True    Click Logout Button
 

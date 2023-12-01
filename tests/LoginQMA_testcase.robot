@@ -5,14 +5,18 @@ Resource    ../resources/login_resources.robot
 Test Setup    Open My Browser
 Test Teardown    login_resources.Close Browser
 
+*** Variables ***
+${USERNAME}    daniel
+${PASSWORD}    daniel202103003
+
 *** Test Cases ***
 LoginQMA
     [Tags]    Positive Test
-    Login    daniel    daniel202103003
+    Login    ${USERNAME}    ${PASSWORD}
 
 LoginQMA2
     [Tags]    Negative Test
-    Invalid Login    daniel    123
+    Invalid Login    ${USERNAME}    123
 
 *** Keywords ***
 Login

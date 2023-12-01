@@ -6,11 +6,15 @@ Suite Setup    Open My Browser
 Suite Teardown    login_resources.Close Browser
 Test Template    Login
 
+*** Variables ***
+${USERNAME}    daniel
+${PASSWORD}    daniel202103003
+
 *** Test Cases ***
-Username benar dan password benar    daniel    daniel202103003
+Username benar dan password benar    ${USERNAME}    ${PASSWORD}
     [Tags]    Positive
     [Documentation]    Mencoba Testing Positive dengan data daniel
-Username benar dan password salah    daniel    123
+Username benar dan password salah    ${USERNAME}    123
     [Tags]    Negative
 Username salah dan password salah     asd    asd
     [Tags]    Negative 

@@ -1,602 +1,199 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1.1 (Python 3.12.0 on win32)" generated="20231201 13:08:44.566" rpa="false" schemaversion="4">
-<suite id="s1" name="LoginQMA csv" source="f:\!Belajar\Robot\robotframeworkqma\tests\LoginQMA_csv.robot">
+<robot generator="Robot 6.1.1 (Python 3.12.0 on win32)" generated="20231201 20:20:07.377" rpa="false" schemaversion="4">
+<suite id="s1" name="LoginQMA testcase" source="F:\!Belajar\Robot\robotframeworkqma\tests\LoginQMA_testcase.robot">
+<test id="s1-t1" name="LoginQMA" line="13">
 <kw name="Open My Browser" library="login_resources" type="SETUP">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>${QMA_URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20231201 13:08:44.907" level="INFO">Opening browser 'chrome' to base url 'https://testingqa-office.nexcloud.id/testingqa/automation/webui/login'.</msg>
-<status status="PASS" starttime="20231201 13:08:44.906" endtime="20231201 13:08:51.111"/>
+<msg timestamp="20231201 20:20:07.730" level="INFO">Opening browser 'chrome' to base url 'https://testingqa-office.nexcloud.id/testingqa/automation/webui/login'.</msg>
+<status status="PASS" starttime="20231201 20:20:07.728" endtime="20231201 20:20:10.780"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20231201 13:08:51.112" endtime="20231201 13:08:51.231"/>
+<status status="PASS" starttime="20231201 20:20:10.780" endtime="20231201 20:20:10.953"/>
 </kw>
 <kw name="Page Should Contain" library="SeleniumLibrary">
-<arg>Nex</arg>
+<arg>${VERIFY_NEX}</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<msg timestamp="20231201 13:08:51.253" level="INFO">Current page contains text 'Nex'.</msg>
-<status status="PASS" starttime="20231201 13:08:51.231" endtime="20231201 13:08:51.253"/>
+<msg timestamp="20231201 20:20:10.989" level="INFO">Current page contains text 'Nex'.</msg>
+<status status="PASS" starttime="20231201 20:20:10.953" endtime="20231201 20:20:10.989"/>
 </kw>
-<status status="PASS" starttime="20231201 13:08:44.905" endtime="20231201 13:08:51.253"/>
+<status status="PASS" starttime="20231201 20:20:07.727" endtime="20231201 20:20:10.989"/>
 </kw>
-<test id="s1-t1" name="Username benar dan password benar" line="12">
 <kw name="Login">
-<arg>daniel</arg>
-<arg>daniel202103003</arg>
+<arg>${USERNAME}</arg>
+<arg>${PASSWORD}</arg>
 <kw name="Input Username" library="login_resources">
-<arg>${UserNAMEs}</arg>
+<arg>${username}</arg>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${TEXTFIELD_USERNAME}</arg>
 <arg>${username}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231201 13:08:51.258" level="INFO">Typing text 'daniel' into text field 'username'.</msg>
-<status status="PASS" starttime="20231201 13:08:51.257" endtime="20231201 13:08:51.400"/>
+<msg timestamp="20231201 20:20:10.991" level="INFO">Typing text 'daniel' into text field 'username'.</msg>
+<status status="PASS" starttime="20231201 20:20:10.991" endtime="20231201 20:20:11.154"/>
 </kw>
-<status status="PASS" starttime="20231201 13:08:51.256" endtime="20231201 13:08:51.400"/>
+<status status="PASS" starttime="20231201 20:20:10.990" endtime="20231201 20:20:11.154"/>
 </kw>
 <kw name="Input Password" library="login_resources">
-<arg>${Psswrd}</arg>
+<arg>${password}</arg>
 <kw name="Input Password" library="SeleniumLibrary">
 <arg>${TEXTFIELD_PASSWORD}</arg>
 <arg>${password}</arg>
 <doc>Types the given password into the text field identified by ``locator``.</doc>
-<msg timestamp="20231201 13:08:51.401" level="INFO">Typing password into text field 'password'.</msg>
-<msg timestamp="20231201 13:08:51.479" level="INFO">Temporally setting log level to: NONE</msg>
-<msg timestamp="20231201 13:08:51.565" level="INFO">Log level changed from NONE to INFO.</msg>
-<status status="PASS" starttime="20231201 13:08:51.401" endtime="20231201 13:08:51.566"/>
+<msg timestamp="20231201 20:20:11.155" level="INFO">Typing password into text field 'password'.</msg>
+<msg timestamp="20231201 20:20:11.224" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20231201 20:20:11.322" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20231201 20:20:11.155" endtime="20231201 20:20:11.322"/>
 </kw>
-<status status="PASS" starttime="20231201 13:08:51.400" endtime="20231201 13:08:51.566"/>
+<status status="PASS" starttime="20231201 20:20:11.154" endtime="20231201 20:20:11.323"/>
 </kw>
 <kw name="Click Login Button" library="login_resources">
 <kw name="Sleep" library="BuiltIn">
 <arg>${TIMEOUT}</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20231201 13:08:52.567" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20231201 13:08:51.566" endtime="20231201 13:08:52.567"/>
+<msg timestamp="20231201 20:20:12.324" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20231201 20:20:11.323" endtime="20231201 20:20:12.324"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>${BUTTON_LOGIN}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20231201 13:08:52.569" level="INFO">Clicking button 'Log in'.</msg>
-<status status="PASS" starttime="20231201 13:08:52.568" endtime="20231201 13:08:52.626"/>
+<msg timestamp="20231201 20:20:12.325" level="INFO">Clicking button 'Log in'.</msg>
+<status status="PASS" starttime="20231201 20:20:12.324" endtime="20231201 20:20:12.398"/>
 </kw>
-<status status="PASS" starttime="20231201 13:08:51.566" endtime="20231201 13:08:52.626"/>
+<status status="PASS" starttime="20231201 20:20:11.323" endtime="20231201 20:20:12.398"/>
 </kw>
-<kw name="Run Keyword And Return Status" library="BuiltIn">
-<var>${LoggedIn}</var>
-<arg>Verify Success Login</arg>
-<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
 <kw name="Verify Success Login" library="login_resources">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>name</arg>
+<arg>${BUTTON_TOGGLE}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<msg timestamp="20231201 13:08:57.250" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=119.0.6045.160)
-Stacktrace:
-	GetHandleVerifier [0x00007FF7840B82B2+55298]
-	(No symbol) [0x00007FF784025E02]
-	(No symbol) [0x00007FF783EE05AB]
-	(No symbol) [0x00007FF783EC0038]
-	(No symbol) [0x00007FF783F46BC7]
-	(No symbol) [0x00007FF783F5A15F]
-	(No symbol) [0x00007FF783F41E83]
-	(No symbol) [0x00007FF783F1670A]
-	(No symbol) [0x00007FF783F17964]
-	GetHandleVerifier [0x00007FF784430AAB+3694587]
-	GetHandleVerifier [0x00007FF78448728E+4048862]
-	GetHandleVerifier [0x00007FF78447F173+4015811]
-	GetHandleVerifier [0x00007FF7841547D6+695590]
-	(No symbol) [0x00007FF784030CE8]
-	(No symbol) [0x00007FF78402CF34]
-	(No symbol) [0x00007FF78402D062]
-	(No symbol) [0x00007FF78401D3A3]
-	BaseThreadInitThunk [0x00007FFA3666257D+29]
-	RtlUserThreadStart [0x00007FFA3714AA58+40]
-</msg>
-<msg timestamp="20231201 13:08:57.255" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=119.0.6045.160)
-Stacktrace:
-	GetHandleVerifier [0x00007FF7840B82B2+55298]
-	(No symbol) [0x00007FF784025E02]
-	(No symbol) [0x00007FF783EE05AB]
-	(No symbol) [0x00007FF783EC0038]
-	(No symbol) [0x00007FF783F46BC7]
-	(No symbol) [0x00007FF783F5A15F]
-	(No symbol) [0x00007FF783F41E83]
-	(No symbol) [0x00007FF783F1670A]
-	(No symbol) [0x00007FF783F17964]
-	GetHandleVerifier [0x00007FF784430AAB+3694587]
-	GetHandleVerifier [0x00007FF78448728E+4048862]
-	GetHandleVerifier [0x00007FF78447F173+4015811]
-	GetHandleVerifier [0x00007FF7841547D6+695590]
-	(No symbol) [0x00007FF784030CE8]
-	(No symbol) [0x00007FF78402CF34]
-	(No symbol) [0x00007FF78402D062]
-	(No symbol) [0x00007FF78401D3A3]
-	BaseThreadInitThunk [0x00007FFA3666257D+29]
-	RtlUserThreadStart [0x00007FFA3714AA58+40]
-</msg>
-<status status="FAIL" starttime="20231201 13:08:52.627" endtime="20231201 13:08:57.261"/>
+<status status="PASS" starttime="20231201 20:20:12.399" endtime="20231201 20:20:12.955"/>
+</kw>
+<status status="PASS" starttime="20231201 20:20:12.399" endtime="20231201 20:20:12.955"/>
+</kw>
+<status status="PASS" starttime="20231201 20:20:10.989" endtime="20231201 20:20:12.955"/>
+</kw>
+<kw name="Close Browser" library="login_resources" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20231201 20:20:12.955" endtime="20231201 20:20:15.211"/>
+</kw>
+<status status="PASS" starttime="20231201 20:20:12.955" endtime="20231201 20:20:15.211"/>
+</kw>
+<tag>Positive Test</tag>
+<status status="PASS" starttime="20231201 20:20:07.727" endtime="20231201 20:20:15.211"/>
+</test>
+<test id="s1-t2" name="LoginQMA2" line="17">
+<kw name="Open My Browser" library="login_resources" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${QMA_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231201 20:20:15.213" level="INFO">Opening browser 'chrome' to base url 'https://testingqa-office.nexcloud.id/testingqa/automation/webui/login'.</msg>
+<status status="PASS" starttime="20231201 20:20:15.213" endtime="20231201 20:20:17.606"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20231201 20:20:17.606" endtime="20231201 20:20:17.792"/>
 </kw>
 <kw name="Page Should Contain" library="SeleniumLibrary">
-<arg>Daniel</arg>
+<arg>${VERIFY_NEX}</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<status status="NOT RUN" starttime="20231201 13:08:57.262" endtime="20231201 13:08:57.262"/>
+<msg timestamp="20231201 20:20:17.825" level="INFO">Current page contains text 'Nex'.</msg>
+<status status="PASS" starttime="20231201 20:20:17.792" endtime="20231201 20:20:17.825"/>
 </kw>
-<status status="FAIL" starttime="20231201 13:08:52.627" endtime="20231201 13:08:57.262"/>
+<status status="PASS" starttime="20231201 20:20:15.213" endtime="20231201 20:20:17.826"/>
 </kw>
-<msg timestamp="20231201 13:08:57.263" level="INFO">${LoggedIn} = False</msg>
-<status status="PASS" starttime="20231201 13:08:52.627" endtime="20231201 13:08:57.263"/>
+<kw name="Invalid Login">
+<arg>${USERNAME}</arg>
+<arg>123</arg>
+<kw name="Input Username" library="login_resources">
+<arg>${username}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${TEXTFIELD_USERNAME}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231201 20:20:17.828" level="INFO">Typing text 'daniel' into text field 'username'.</msg>
+<status status="PASS" starttime="20231201 20:20:17.827" endtime="20231201 20:20:17.976"/>
 </kw>
-<kw name="Run Keyword If" library="BuiltIn">
-<arg>${LoggedIn} == True</arg>
-<arg>Verify Success Login</arg>
-<arg>ELSE</arg>
-<arg>Verify Invalid Login</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20231201 20:20:17.827" endtime="20231201 20:20:17.976"/>
+</kw>
+<kw name="Input Password" library="login_resources">
+<arg>${password}</arg>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>${TEXTFIELD_PASSWORD}</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20231201 20:20:17.978" level="INFO">Typing password into text field 'password'.</msg>
+<msg timestamp="20231201 20:20:18.032" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20231201 20:20:18.106" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20231201 20:20:17.977" endtime="20231201 20:20:18.107"/>
+</kw>
+<status status="PASS" starttime="20231201 20:20:17.977" endtime="20231201 20:20:18.107"/>
+</kw>
+<kw name="Click Login Button" library="login_resources">
+<kw name="Sleep" library="BuiltIn">
+<arg>${TIMEOUT}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231201 20:20:19.107" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20231201 20:20:18.107" endtime="20231201 20:20:19.107"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${BUTTON_LOGIN}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231201 20:20:19.107" level="INFO">Clicking button 'Log in'.</msg>
+<status status="PASS" starttime="20231201 20:20:19.107" endtime="20231201 20:20:19.178"/>
+</kw>
+<status status="PASS" starttime="20231201 20:20:18.107" endtime="20231201 20:20:19.178"/>
+</kw>
 <kw name="Verify Invalid Login" library="login_resources">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${POPUP_FAILED}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<msg timestamp="20231201 13:08:57.277" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=119.0.6045.160)
-Stacktrace:
-	GetHandleVerifier [0x00007FF7840B82B2+55298]
-	(No symbol) [0x00007FF784025E02]
-	(No symbol) [0x00007FF783EE05AB]
-	(No symbol) [0x00007FF783EC0038]
-	(No symbol) [0x00007FF783F46BC7]
-	(No symbol) [0x00007FF783F5A15F]
-	(No symbol) [0x00007FF783F41E83]
-	(No symbol) [0x00007FF783F1670A]
-	(No symbol) [0x00007FF783F17964]
-	GetHandleVerifier [0x00007FF784430AAB+3694587]
-	GetHandleVerifier [0x00007FF78448728E+4048862]
-	GetHandleVerifier [0x00007FF78447F173+4015811]
-	GetHandleVerifier [0x00007FF7841547D6+695590]
-	(No symbol) [0x00007FF784030CE8]
-	(No symbol) [0x00007FF78402CF34]
-	(No symbol) [0x00007FF78402D062]
-	(No symbol) [0x00007FF78401D3A3]
-	BaseThreadInitThunk [0x00007FFA3666257D+29]
-	RtlUserThreadStart [0x00007FFA3714AA58+40]
-</msg>
-<msg timestamp="20231201 13:08:57.281" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=119.0.6045.160)
-Stacktrace:
-	GetHandleVerifier [0x00007FF7840B82B2+55298]
-	(No symbol) [0x00007FF784025E02]
-	(No symbol) [0x00007FF783EE05AB]
-	(No symbol) [0x00007FF783EC0038]
-	(No symbol) [0x00007FF783F46BC7]
-	(No symbol) [0x00007FF783F5A15F]
-	(No symbol) [0x00007FF783F41E83]
-	(No symbol) [0x00007FF783F1670A]
-	(No symbol) [0x00007FF783F17964]
-	GetHandleVerifier [0x00007FF784430AAB+3694587]
-	GetHandleVerifier [0x00007FF78448728E+4048862]
-	GetHandleVerifier [0x00007FF78447F173+4015811]
-	GetHandleVerifier [0x00007FF7841547D6+695590]
-	(No symbol) [0x00007FF784030CE8]
-	(No symbol) [0x00007FF78402CF34]
-	(No symbol) [0x00007FF78402D062]
-	(No symbol) [0x00007FF78401D3A3]
-	BaseThreadInitThunk [0x00007FFA3666257D+29]
-	RtlUserThreadStart [0x00007FFA3714AA58+40]
-</msg>
-<status status="FAIL" starttime="20231201 13:08:57.265" endtime="20231201 13:08:57.286"/>
+<status status="PASS" starttime="20231201 20:20:19.178" endtime="20231201 20:20:19.442"/>
 </kw>
 <kw name="Page Should Contain" library="SeleniumLibrary">
 <arg>${MESSAGE_FAILED_LOGIN}</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<status status="NOT RUN" starttime="20231201 13:08:57.286" endtime="20231201 13:08:57.287"/>
+<msg timestamp="20231201 20:20:19.461" level="INFO">Current page contains text 'Oops! Login failed. Try Again.'.</msg>
+<status status="PASS" starttime="20231201 20:20:19.442" endtime="20231201 20:20:19.461"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
-<arg>//span[@id='modal-close']</arg>
+<arg>${BUTTON_CLOSE_POPUP_FAILED}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20231201 13:08:57.287" endtime="20231201 13:08:57.288"/>
+<msg timestamp="20231201 20:20:19.462" level="INFO">Clicking element '//span[@id='modal-close']'.</msg>
+<status status="PASS" starttime="20231201 20:20:19.461" endtime="20231201 20:20:19.523"/>
 </kw>
-<status status="FAIL" starttime="20231201 13:08:57.264" endtime="20231201 13:08:57.288"/>
+<status status="PASS" starttime="20231201 20:20:19.178" endtime="20231201 20:20:19.523"/>
 </kw>
-<status status="FAIL" starttime="20231201 13:08:57.263" endtime="20231201 13:08:57.289"/>
+<status status="PASS" starttime="20231201 20:20:17.826" endtime="20231201 20:20:19.523"/>
 </kw>
-<kw name="Run Keyword If" library="BuiltIn">
-<arg>${LoggedIn} == True</arg>
-<arg>Click Logout Button</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="NOT RUN" starttime="20231201 13:08:57.290" endtime="20231201 13:08:57.291"/>
-</kw>
-<status status="FAIL" starttime="20231201 13:08:51.256" endtime="20231201 13:08:57.291"/>
-</kw>
-<doc>dokumentasi1</doc>
-<tag>Positive</tag>
-<status status="FAIL" starttime="20231201 13:08:51.254" endtime="20231201 13:08:57.292">NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=119.0.6045.160)
-Stacktrace:
-	GetHandleVerifier [0x00007FF7840B82B2+55298]
-	(No symbol) [0x00007FF784025E02]
-	(No symbol) [0x00007FF783EE05AB]
-	(No symbol) [0x00007FF783EC0038]
-	(No symbol) [0x00007FF783F46BC7]
-	(No symbol) [0x00007FF783F5A15F]
-	(No symbol) [0x00007FF783F41E83]
-	(No symbol) [0x00007FF783F1670A]
-	(No symbol) [0x00007FF783F17964]
-	GetHandleVerifier [0x00007FF784430AAB+3694587]
-	GetHandleVerifier [0x00007FF78448728E+4048862]
-	GetHandleVerifier [0x00007FF78447F173+4015811]
-	GetHandleVerifier [0x00007FF7841547D6+695590]
-	(No symbol) [0x00007FF784030CE8]
-	(No symbol) [0x00007FF78402CF34]
-	(No symbol) [0x00007FF78402D062]
-	(No symbol) [0x00007FF78401D3A3]
-	BaseThreadInitThunk [0x00007FFA3666257D+29]
-	RtlUserThreadStart [0x00007FFA3714AA58+40]
-</status>
-</test>
-<test id="s1-t2" name="Username benar dan password salah" line="12">
-<kw name="Login">
-<arg>daniel</arg>
-<arg>asd</arg>
-<kw name="Input Username" library="login_resources">
-<arg>${UserNAMEs}</arg>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${TEXTFIELD_USERNAME}</arg>
-<arg>${username}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231201 13:08:57.301" level="INFO">Typing text 'daniel' into text field 'username'.</msg>
-<msg timestamp="20231201 13:08:57.306" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=119.0.6045.160)
-Stacktrace:
-	GetHandleVerifier [0x00007FF7840B82B2+55298]
-	(No symbol) [0x00007FF784025E02]
-	(No symbol) [0x00007FF783EE05AB]
-	(No symbol) [0x00007FF783EC0038]
-	(No symbol) [0x00007FF783F46BC7]
-	(No symbol) [0x00007FF783F5A15F]
-	(No symbol) [0x00007FF783F41E83]
-	(No symbol) [0x00007FF783F1670A]
-	(No symbol) [0x00007FF783F17964]
-	GetHandleVerifier [0x00007FF784430AAB+3694587]
-	GetHandleVerifier [0x00007FF78448728E+4048862]
-	GetHandleVerifier [0x00007FF78447F173+4015811]
-	GetHandleVerifier [0x00007FF7841547D6+695590]
-	(No symbol) [0x00007FF784030CE8]
-	(No symbol) [0x00007FF78402CF34]
-	(No symbol) [0x00007FF78402D062]
-	(No symbol) [0x00007FF78401D3A3]
-	BaseThreadInitThunk [0x00007FFA3666257D+29]
-	RtlUserThreadStart [0x00007FFA3714AA58+40]
-</msg>
-<msg timestamp="20231201 13:08:57.310" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=119.0.6045.160)
-Stacktrace:
-	GetHandleVerifier [0x00007FF7840B82B2+55298]
-	(No symbol) [0x00007FF784025E02]
-	(No symbol) [0x00007FF783EE05AB]
-	(No symbol) [0x00007FF783EC0038]
-	(No symbol) [0x00007FF783F46BC7]
-	(No symbol) [0x00007FF783F5A15F]
-	(No symbol) [0x00007FF783F41E83]
-	(No symbol) [0x00007FF783F1670A]
-	(No symbol) [0x00007FF783F17964]
-	GetHandleVerifier [0x00007FF784430AAB+3694587]
-	GetHandleVerifier [0x00007FF78448728E+4048862]
-	GetHandleVerifier [0x00007FF78447F173+4015811]
-	GetHandleVerifier [0x00007FF7841547D6+695590]
-	(No symbol) [0x00007FF784030CE8]
-	(No symbol) [0x00007FF78402CF34]
-	(No symbol) [0x00007FF78402D062]
-	(No symbol) [0x00007FF78401D3A3]
-	BaseThreadInitThunk [0x00007FFA3666257D+29]
-	RtlUserThreadStart [0x00007FFA3714AA58+40]
-</msg>
-<status status="FAIL" starttime="20231201 13:08:57.300" endtime="20231201 13:08:57.312"/>
-</kw>
-<status status="FAIL" starttime="20231201 13:08:57.300" endtime="20231201 13:08:57.312"/>
-</kw>
-<kw name="Input Password" library="login_resources">
-<arg>${Psswrd}</arg>
-<status status="NOT RUN" starttime="20231201 13:08:57.314" endtime="20231201 13:08:57.314"/>
-</kw>
-<kw name="Click Login Button" library="login_resources">
-<status status="NOT RUN" starttime="20231201 13:08:57.314" endtime="20231201 13:08:57.314"/>
-</kw>
-<kw name="Run Keyword And Return Status" library="BuiltIn">
-<var>${LoggedIn}</var>
-<arg>Verify Success Login</arg>
-<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<status status="NOT RUN" starttime="20231201 13:08:57.315" endtime="20231201 13:08:57.315"/>
-</kw>
-<kw name="Run Keyword If" library="BuiltIn">
-<arg>${LoggedIn} == True</arg>
-<arg>Verify Success Login</arg>
-<arg>ELSE</arg>
-<arg>Verify Invalid Login</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="NOT RUN" starttime="20231201 13:08:57.315" endtime="20231201 13:08:57.315"/>
-</kw>
-<kw name="Run Keyword If" library="BuiltIn">
-<arg>${LoggedIn} == True</arg>
-<arg>Click Logout Button</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="NOT RUN" starttime="20231201 13:08:57.316" endtime="20231201 13:08:57.316"/>
-</kw>
-<status status="FAIL" starttime="20231201 13:08:57.299" endtime="20231201 13:08:57.316"/>
-</kw>
-<doc>dokumentasi2</doc>
-<tag>Negative</tag>
-<status status="FAIL" starttime="20231201 13:08:57.297" endtime="20231201 13:08:57.317">NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=119.0.6045.160)
-Stacktrace:
-	GetHandleVerifier [0x00007FF7840B82B2+55298]
-	(No symbol) [0x00007FF784025E02]
-	(No symbol) [0x00007FF783EE05AB]
-	(No symbol) [0x00007FF783EC0038]
-	(No symbol) [0x00007FF783F46BC7]
-	(No symbol) [0x00007FF783F5A15F]
-	(No symbol) [0x00007FF783F41E83]
-	(No symbol) [0x00007FF783F1670A]
-	(No symbol) [0x00007FF783F17964]
-	GetHandleVerifier [0x00007FF784430AAB+3694587]
-	GetHandleVerifier [0x00007FF78448728E+4048862]
-	GetHandleVerifier [0x00007FF78447F173+4015811]
-	GetHandleVerifier [0x00007FF7841547D6+695590]
-	(No symbol) [0x00007FF784030CE8]
-	(No symbol) [0x00007FF78402CF34]
-	(No symbol) [0x00007FF78402D062]
-	(No symbol) [0x00007FF78401D3A3]
-	BaseThreadInitThunk [0x00007FFA3666257D+29]
-	RtlUserThreadStart [0x00007FFA3714AA58+40]
-</status>
-</test>
-<test id="s1-t3" name="Username salah dan password salah" line="12">
-<kw name="Login">
-<arg>asd</arg>
-<arg>asd</arg>
-<kw name="Input Username" library="login_resources">
-<arg>${UserNAMEs}</arg>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${TEXTFIELD_USERNAME}</arg>
-<arg>${username}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231201 13:08:57.326" level="INFO">Typing text 'asd' into text field 'username'.</msg>
-<msg timestamp="20231201 13:08:57.330" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=119.0.6045.160)
-Stacktrace:
-	GetHandleVerifier [0x00007FF7840B82B2+55298]
-	(No symbol) [0x00007FF784025E02]
-	(No symbol) [0x00007FF783EE05AB]
-	(No symbol) [0x00007FF783EC0038]
-	(No symbol) [0x00007FF783F46BC7]
-	(No symbol) [0x00007FF783F5A15F]
-	(No symbol) [0x00007FF783F41E83]
-	(No symbol) [0x00007FF783F1670A]
-	(No symbol) [0x00007FF783F17964]
-	GetHandleVerifier [0x00007FF784430AAB+3694587]
-	GetHandleVerifier [0x00007FF78448728E+4048862]
-	GetHandleVerifier [0x00007FF78447F173+4015811]
-	GetHandleVerifier [0x00007FF7841547D6+695590]
-	(No symbol) [0x00007FF784030CE8]
-	(No symbol) [0x00007FF78402CF34]
-	(No symbol) [0x00007FF78402D062]
-	(No symbol) [0x00007FF78401D3A3]
-	BaseThreadInitThunk [0x00007FFA3666257D+29]
-	RtlUserThreadStart [0x00007FFA3714AA58+40]
-</msg>
-<msg timestamp="20231201 13:08:57.333" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=119.0.6045.160)
-Stacktrace:
-	GetHandleVerifier [0x00007FF7840B82B2+55298]
-	(No symbol) [0x00007FF784025E02]
-	(No symbol) [0x00007FF783EE05AB]
-	(No symbol) [0x00007FF783EC0038]
-	(No symbol) [0x00007FF783F46BC7]
-	(No symbol) [0x00007FF783F5A15F]
-	(No symbol) [0x00007FF783F41E83]
-	(No symbol) [0x00007FF783F1670A]
-	(No symbol) [0x00007FF783F17964]
-	GetHandleVerifier [0x00007FF784430AAB+3694587]
-	GetHandleVerifier [0x00007FF78448728E+4048862]
-	GetHandleVerifier [0x00007FF78447F173+4015811]
-	GetHandleVerifier [0x00007FF7841547D6+695590]
-	(No symbol) [0x00007FF784030CE8]
-	(No symbol) [0x00007FF78402CF34]
-	(No symbol) [0x00007FF78402D062]
-	(No symbol) [0x00007FF78401D3A3]
-	BaseThreadInitThunk [0x00007FFA3666257D+29]
-	RtlUserThreadStart [0x00007FFA3714AA58+40]
-</msg>
-<status status="FAIL" starttime="20231201 13:08:57.325" endtime="20231201 13:08:57.337"/>
-</kw>
-<status status="FAIL" starttime="20231201 13:08:57.324" endtime="20231201 13:08:57.337"/>
-</kw>
-<kw name="Input Password" library="login_resources">
-<arg>${Psswrd}</arg>
-<status status="NOT RUN" starttime="20231201 13:08:57.337" endtime="20231201 13:08:57.338"/>
-</kw>
-<kw name="Click Login Button" library="login_resources">
-<status status="NOT RUN" starttime="20231201 13:08:57.338" endtime="20231201 13:08:57.338"/>
-</kw>
-<kw name="Run Keyword And Return Status" library="BuiltIn">
-<var>${LoggedIn}</var>
-<arg>Verify Success Login</arg>
-<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<status status="NOT RUN" starttime="20231201 13:08:57.339" endtime="20231201 13:08:57.339"/>
-</kw>
-<kw name="Run Keyword If" library="BuiltIn">
-<arg>${LoggedIn} == True</arg>
-<arg>Verify Success Login</arg>
-<arg>ELSE</arg>
-<arg>Verify Invalid Login</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="NOT RUN" starttime="20231201 13:08:57.339" endtime="20231201 13:08:57.339"/>
-</kw>
-<kw name="Run Keyword If" library="BuiltIn">
-<arg>${LoggedIn} == True</arg>
-<arg>Click Logout Button</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="NOT RUN" starttime="20231201 13:08:57.340" endtime="20231201 13:08:57.340"/>
-</kw>
-<status status="FAIL" starttime="20231201 13:08:57.323" endtime="20231201 13:08:57.340"/>
-</kw>
-<doc>dokumentasi3</doc>
-<tag>Negative</tag>
-<status status="FAIL" starttime="20231201 13:08:57.321" endtime="20231201 13:08:57.341">NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=119.0.6045.160)
-Stacktrace:
-	GetHandleVerifier [0x00007FF7840B82B2+55298]
-	(No symbol) [0x00007FF784025E02]
-	(No symbol) [0x00007FF783EE05AB]
-	(No symbol) [0x00007FF783EC0038]
-	(No symbol) [0x00007FF783F46BC7]
-	(No symbol) [0x00007FF783F5A15F]
-	(No symbol) [0x00007FF783F41E83]
-	(No symbol) [0x00007FF783F1670A]
-	(No symbol) [0x00007FF783F17964]
-	GetHandleVerifier [0x00007FF784430AAB+3694587]
-	GetHandleVerifier [0x00007FF78448728E+4048862]
-	GetHandleVerifier [0x00007FF78447F173+4015811]
-	GetHandleVerifier [0x00007FF7841547D6+695590]
-	(No symbol) [0x00007FF784030CE8]
-	(No symbol) [0x00007FF78402CF34]
-	(No symbol) [0x00007FF78402D062]
-	(No symbol) [0x00007FF78401D3A3]
-	BaseThreadInitThunk [0x00007FFA3666257D+29]
-	RtlUserThreadStart [0x00007FFA3714AA58+40]
-</status>
-</test>
 <kw name="Close Browser" library="login_resources" type="TEARDOWN">
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20231201 13:08:57.346" endtime="20231201 13:08:59.428"/>
+<status status="PASS" starttime="20231201 20:20:19.524" endtime="20231201 20:20:21.722"/>
 </kw>
-<status status="PASS" starttime="20231201 13:08:57.345" endtime="20231201 13:08:59.428"/>
+<status status="PASS" starttime="20231201 20:20:19.523" endtime="20231201 20:20:21.722"/>
 </kw>
+<tag>Negative Test</tag>
+<status status="PASS" starttime="20231201 20:20:15.212" endtime="20231201 20:20:21.722"/>
+</test>
 <doc>Testing Login QMA Site</doc>
-<status status="FAIL" starttime="20231201 13:08:44.572" endtime="20231201 13:08:59.428"/>
+<status status="PASS" starttime="20231201 20:20:07.379" endtime="20231201 20:20:21.723"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="3" skip="0">All Tests</stat>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="0" fail="2" skip="0">Negative</stat>
-<stat pass="0" fail="1" skip="0">Positive</stat>
+<stat pass="1" fail="0" skip="0">Negative Test</stat>
+<stat pass="1" fail="0" skip="0">Positive Test</stat>
 </tag>
 <suite>
-<stat pass="0" fail="3" skip="0" id="s1" name="LoginQMA csv">LoginQMA csv</stat>
+<stat pass="2" fail="0" skip="0" id="s1" name="LoginQMA testcase">LoginQMA testcase</stat>
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20231201 13:08:57.250" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=119.0.6045.160)
-Stacktrace:
-	GetHandleVerifier [0x00007FF7840B82B2+55298]
-	(No symbol) [0x00007FF784025E02]
-	(No symbol) [0x00007FF783EE05AB]
-	(No symbol) [0x00007FF783EC0038]
-	(No symbol) [0x00007FF783F46BC7]
-	(No symbol) [0x00007FF783F5A15F]
-	(No symbol) [0x00007FF783F41E83]
-	(No symbol) [0x00007FF783F1670A]
-	(No symbol) [0x00007FF783F17964]
-	GetHandleVerifier [0x00007FF784430AAB+3694587]
-	GetHandleVerifier [0x00007FF78448728E+4048862]
-	GetHandleVerifier [0x00007FF78447F173+4015811]
-	GetHandleVerifier [0x00007FF7841547D6+695590]
-	(No symbol) [0x00007FF784030CE8]
-	(No symbol) [0x00007FF78402CF34]
-	(No symbol) [0x00007FF78402D062]
-	(No symbol) [0x00007FF78401D3A3]
-	BaseThreadInitThunk [0x00007FFA3666257D+29]
-	RtlUserThreadStart [0x00007FFA3714AA58+40]
-</msg>
-<msg timestamp="20231201 13:08:57.277" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=119.0.6045.160)
-Stacktrace:
-	GetHandleVerifier [0x00007FF7840B82B2+55298]
-	(No symbol) [0x00007FF784025E02]
-	(No symbol) [0x00007FF783EE05AB]
-	(No symbol) [0x00007FF783EC0038]
-	(No symbol) [0x00007FF783F46BC7]
-	(No symbol) [0x00007FF783F5A15F]
-	(No symbol) [0x00007FF783F41E83]
-	(No symbol) [0x00007FF783F1670A]
-	(No symbol) [0x00007FF783F17964]
-	GetHandleVerifier [0x00007FF784430AAB+3694587]
-	GetHandleVerifier [0x00007FF78448728E+4048862]
-	GetHandleVerifier [0x00007FF78447F173+4015811]
-	GetHandleVerifier [0x00007FF7841547D6+695590]
-	(No symbol) [0x00007FF784030CE8]
-	(No symbol) [0x00007FF78402CF34]
-	(No symbol) [0x00007FF78402D062]
-	(No symbol) [0x00007FF78401D3A3]
-	BaseThreadInitThunk [0x00007FFA3666257D+29]
-	RtlUserThreadStart [0x00007FFA3714AA58+40]
-</msg>
-<msg timestamp="20231201 13:08:57.306" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=119.0.6045.160)
-Stacktrace:
-	GetHandleVerifier [0x00007FF7840B82B2+55298]
-	(No symbol) [0x00007FF784025E02]
-	(No symbol) [0x00007FF783EE05AB]
-	(No symbol) [0x00007FF783EC0038]
-	(No symbol) [0x00007FF783F46BC7]
-	(No symbol) [0x00007FF783F5A15F]
-	(No symbol) [0x00007FF783F41E83]
-	(No symbol) [0x00007FF783F1670A]
-	(No symbol) [0x00007FF783F17964]
-	GetHandleVerifier [0x00007FF784430AAB+3694587]
-	GetHandleVerifier [0x00007FF78448728E+4048862]
-	GetHandleVerifier [0x00007FF78447F173+4015811]
-	GetHandleVerifier [0x00007FF7841547D6+695590]
-	(No symbol) [0x00007FF784030CE8]
-	(No symbol) [0x00007FF78402CF34]
-	(No symbol) [0x00007FF78402D062]
-	(No symbol) [0x00007FF78401D3A3]
-	BaseThreadInitThunk [0x00007FFA3666257D+29]
-	RtlUserThreadStart [0x00007FFA3714AA58+40]
-</msg>
-<msg timestamp="20231201 13:08:57.330" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=119.0.6045.160)
-Stacktrace:
-	GetHandleVerifier [0x00007FF7840B82B2+55298]
-	(No symbol) [0x00007FF784025E02]
-	(No symbol) [0x00007FF783EE05AB]
-	(No symbol) [0x00007FF783EC0038]
-	(No symbol) [0x00007FF783F46BC7]
-	(No symbol) [0x00007FF783F5A15F]
-	(No symbol) [0x00007FF783F41E83]
-	(No symbol) [0x00007FF783F1670A]
-	(No symbol) [0x00007FF783F17964]
-	GetHandleVerifier [0x00007FF784430AAB+3694587]
-	GetHandleVerifier [0x00007FF78448728E+4048862]
-	GetHandleVerifier [0x00007FF78447F173+4015811]
-	GetHandleVerifier [0x00007FF7841547D6+695590]
-	(No symbol) [0x00007FF784030CE8]
-	(No symbol) [0x00007FF78402CF34]
-	(No symbol) [0x00007FF78402D062]
-	(No symbol) [0x00007FF78401D3A3]
-	BaseThreadInitThunk [0x00007FFA3666257D+29]
-	RtlUserThreadStart [0x00007FFA3714AA58+40]
-</msg>
 </errors>
 </robot>

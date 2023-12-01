@@ -10,7 +10,7 @@ ${USERNAME_ACCOUNT}    daniel
 ${PASSWORD_ACCOUNT}    daniel202103003
 
 # Daily
-${CHECK_IN_DATE}    01/01/2021
+${CHECK_IN_DATE}    02/01/2021
 ${YESTERDAY_TASK}
 ...    - Demo NexSam${\n} 
 ...    - Management Ticket${\n} 

@@ -4,7 +4,7 @@ Library    SeleniumLibrary
 *** Variables ***
 # Elements
 ${BUTTON_INSIGHT}    //body[1]/div[1]/div[6]/label[1]
-${BUTTON_MY_TRACKER}    //a[@id='myTrackerItem']
+${BUTTON_MY_TRACKER}    //*[@id="myTrackerItem"]
 ${IFRAME_TRACKER}    //iframe[contains(@src,/testingqa/automation/webui/home/insights/checkins)]
 ${BUTTON_ADD_DAILY}    //button[@id='buttonAdd']
 ${TEXTFIELD_DATE}    //input[@id='checkinDate']

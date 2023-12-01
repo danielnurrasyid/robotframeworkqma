@@ -3,12 +3,10 @@ Library    SeleniumLibrary
 Resource    ../keywords/login_resources.robot
 Resource    ../variables/mytracker_variables.robot
 
-*** Variables ***
-
-
 *** Keywords ***
 Open Menu Daily
     Click Element    ${BUTTON_INSIGHT}
+    Sleep    ${TIMEOUT}
     Click Element    ${BUTTON_MY_TRACKER}
     Select Frame    ${IFRAME_TRACKER}
     Page Should Contain Element    ${BUTTON_ADD_DAILY}

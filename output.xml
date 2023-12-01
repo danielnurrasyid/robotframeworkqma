@@ -1,40 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1.1 (Python 3.12.0 on win32)" generated="20231201 20:20:07.377" rpa="false" schemaversion="4">
-<suite id="s1" name="LoginQMA testcase" source="F:\!Belajar\Robot\robotframeworkqma\tests\LoginQMA_testcase.robot">
-<test id="s1-t1" name="LoginQMA" line="13">
+<robot generator="Robot 6.1.1 (Python 3.12.0 on win32)" generated="20231201 21:22:35.206" rpa="false" schemaversion="4">
+<suite id="s1" name="LoginQMA testsuite" source="F:\!Belajar\Robot\robotframeworkqma\tests\LoginQMA_testsuite.robot">
 <kw name="Open My Browser" library="login_resources" type="SETUP">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>${QMA_URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20231201 20:20:07.730" level="INFO">Opening browser 'chrome' to base url 'https://testingqa-office.nexcloud.id/testingqa/automation/webui/login'.</msg>
-<status status="PASS" starttime="20231201 20:20:07.728" endtime="20231201 20:20:10.780"/>
+<msg timestamp="20231201 21:22:35.479" level="INFO">Opening browser 'chrome' to base url 'https://testingqa-office.nexcloud.id/testingqa/automation/webui/login'.</msg>
+<status status="PASS" starttime="20231201 21:22:35.478" endtime="20231201 21:22:38.192"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20231201 20:20:10.780" endtime="20231201 20:20:10.953"/>
+<status status="PASS" starttime="20231201 21:22:38.192" endtime="20231201 21:22:38.313"/>
 </kw>
 <kw name="Page Should Contain" library="SeleniumLibrary">
 <arg>${VERIFY_NEX}</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<msg timestamp="20231201 20:20:10.989" level="INFO">Current page contains text 'Nex'.</msg>
-<status status="PASS" starttime="20231201 20:20:10.953" endtime="20231201 20:20:10.989"/>
+<msg timestamp="20231201 21:22:38.429" level="INFO">Current page contains text 'Nex'.</msg>
+<status status="PASS" starttime="20231201 21:22:38.313" endtime="20231201 21:22:38.429"/>
 </kw>
-<status status="PASS" starttime="20231201 20:20:07.727" endtime="20231201 20:20:10.989"/>
+<status status="PASS" starttime="20231201 21:22:35.478" endtime="20231201 21:22:38.429"/>
 </kw>
+<test id="s1-t1" name="Username benar dan password benar" line="14">
 <kw name="Login">
-<arg>${USERNAME}</arg>
-<arg>${PASSWORD}</arg>
+<arg>${USERNAME_ACCOUNT}</arg>
+<arg>${PASSWORD_ACCOUNT}</arg>
 <kw name="Input Username" library="login_resources">
 <arg>${username}</arg>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${TEXTFIELD_USERNAME}</arg>
 <arg>${username}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231201 20:20:10.991" level="INFO">Typing text 'daniel' into text field 'username'.</msg>
-<status status="PASS" starttime="20231201 20:20:10.991" endtime="20231201 20:20:11.154"/>
+<msg timestamp="20231201 21:22:38.433" level="INFO">Typing text 'daniel' into text field 'username'.</msg>
+<status status="PASS" starttime="20231201 21:22:38.432" endtime="20231201 21:22:38.583"/>
 </kw>
-<status status="PASS" starttime="20231201 20:20:10.990" endtime="20231201 20:20:11.154"/>
+<status status="PASS" starttime="20231201 21:22:38.431" endtime="20231201 21:22:38.583"/>
 </kw>
 <kw name="Input Password" library="login_resources">
 <arg>${password}</arg>
@@ -42,71 +42,147 @@
 <arg>${TEXTFIELD_PASSWORD}</arg>
 <arg>${password}</arg>
 <doc>Types the given password into the text field identified by ``locator``.</doc>
-<msg timestamp="20231201 20:20:11.155" level="INFO">Typing password into text field 'password'.</msg>
-<msg timestamp="20231201 20:20:11.224" level="INFO">Temporally setting log level to: NONE</msg>
-<msg timestamp="20231201 20:20:11.322" level="INFO">Log level changed from NONE to INFO.</msg>
-<status status="PASS" starttime="20231201 20:20:11.155" endtime="20231201 20:20:11.322"/>
+<msg timestamp="20231201 21:22:38.585" level="INFO">Typing password into text field 'password'.</msg>
+<msg timestamp="20231201 21:22:38.640" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20231201 21:22:38.736" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20231201 21:22:38.584" endtime="20231201 21:22:38.736"/>
 </kw>
-<status status="PASS" starttime="20231201 20:20:11.154" endtime="20231201 20:20:11.323"/>
+<status status="PASS" starttime="20231201 21:22:38.583" endtime="20231201 21:22:38.736"/>
 </kw>
 <kw name="Click Login Button" library="login_resources">
 <kw name="Sleep" library="BuiltIn">
 <arg>${TIMEOUT}</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20231201 20:20:12.324" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20231201 20:20:11.323" endtime="20231201 20:20:12.324"/>
+<msg timestamp="20231201 21:22:39.738" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20231201 21:22:38.737" endtime="20231201 21:22:39.738"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>${BUTTON_LOGIN}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20231201 20:20:12.325" level="INFO">Clicking button 'Log in'.</msg>
-<status status="PASS" starttime="20231201 20:20:12.324" endtime="20231201 20:20:12.398"/>
+<msg timestamp="20231201 21:22:39.738" level="INFO">Clicking button 'Log in'.</msg>
+<status status="PASS" starttime="20231201 21:22:39.738" endtime="20231201 21:22:39.812"/>
 </kw>
-<status status="PASS" starttime="20231201 20:20:11.323" endtime="20231201 20:20:12.398"/>
+<status status="PASS" starttime="20231201 21:22:38.737" endtime="20231201 21:22:39.812"/>
 </kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${LoggedIn}</var>
+<arg>Verify Success Login</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
 <kw name="Verify Success Login" library="login_resources">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${BUTTON_TOGGLE}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20231201 20:20:12.399" endtime="20231201 20:20:12.955"/>
+<status status="PASS" starttime="20231201 21:22:39.813" endtime="20231201 21:22:40.443"/>
 </kw>
-<status status="PASS" starttime="20231201 20:20:12.399" endtime="20231201 20:20:12.955"/>
+<status status="PASS" starttime="20231201 21:22:39.813" endtime="20231201 21:22:40.443"/>
 </kw>
-<status status="PASS" starttime="20231201 20:20:10.989" endtime="20231201 20:20:12.955"/>
+<msg timestamp="20231201 21:22:40.443" level="INFO">${LoggedIn} = True</msg>
+<status status="PASS" starttime="20231201 21:22:39.812" endtime="20231201 21:22:40.443"/>
 </kw>
-<kw name="Close Browser" library="login_resources" type="TEARDOWN">
-<kw name="Close Browser" library="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20231201 20:20:12.955" endtime="20231201 20:20:15.211"/>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>${LoggedIn} == True</arg>
+<arg>Verify Success Login</arg>
+<arg>ELSE</arg>
+<arg>Verify Invalid Login</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Verify Success Login" library="login_resources">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${BUTTON_TOGGLE}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231201 21:22:40.444" endtime="20231201 21:22:40.469"/>
 </kw>
-<status status="PASS" starttime="20231201 20:20:12.955" endtime="20231201 20:20:15.211"/>
+<status status="PASS" starttime="20231201 21:22:40.444" endtime="20231201 21:22:40.469"/>
 </kw>
-<tag>Positive Test</tag>
-<status status="PASS" starttime="20231201 20:20:07.727" endtime="20231201 20:20:15.211"/>
-</test>
-<test id="s1-t2" name="LoginQMA2" line="17">
-<kw name="Open My Browser" library="login_resources" type="SETUP">
-<kw name="Open Browser" library="SeleniumLibrary">
-<arg>${QMA_URL}</arg>
-<arg>${BROWSER}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20231201 20:20:15.213" level="INFO">Opening browser 'chrome' to base url 'https://testingqa-office.nexcloud.id/testingqa/automation/webui/login'.</msg>
-<status status="PASS" starttime="20231201 20:20:15.213" endtime="20231201 20:20:17.606"/>
+<status status="PASS" starttime="20231201 21:22:40.443" endtime="20231201 21:22:40.469"/>
 </kw>
-<kw name="Maximize Browser Window" library="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20231201 20:20:17.606" endtime="20231201 20:20:17.792"/>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>${LoggedIn} == True</arg>
+<arg>Click Sidebar Toggle</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Click Sidebar Toggle" library="login_resources">
+<kw name="Sleep" library="BuiltIn">
+<arg>${TIMEOUT}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231201 21:22:41.470" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20231201 21:22:40.470" endtime="20231201 21:22:41.470"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${BUTTON_TOGGLE}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231201 21:22:41.470" level="INFO">Clicking element '//div[@id='toggle-btn']'.</msg>
+<status status="PASS" starttime="20231201 21:22:41.470" endtime="20231201 21:22:41.506"/>
+</kw>
+<kw name="Verify my Profile" library="login_resources">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${LABEL_NAME}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231201 21:22:41.506" endtime="20231201 21:22:41.743"/>
 </kw>
 <kw name="Page Should Contain" library="SeleniumLibrary">
-<arg>${VERIFY_NEX}</arg>
+<arg>${VERIFY_MY_NAME}</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<msg timestamp="20231201 20:20:17.825" level="INFO">Current page contains text 'Nex'.</msg>
-<status status="PASS" starttime="20231201 20:20:17.792" endtime="20231201 20:20:17.825"/>
+<msg timestamp="20231201 21:22:41.756" level="INFO">Current page contains text 'Daniel'.</msg>
+<status status="PASS" starttime="20231201 21:22:41.743" endtime="20231201 21:22:41.756"/>
 </kw>
-<status status="PASS" starttime="20231201 20:20:15.213" endtime="20231201 20:20:17.826"/>
+<status status="PASS" starttime="20231201 21:22:41.506" endtime="20231201 21:22:41.756"/>
 </kw>
-<kw name="Invalid Login">
-<arg>${USERNAME}</arg>
+<status status="PASS" starttime="20231201 21:22:40.470" endtime="20231201 21:22:41.756"/>
+</kw>
+<status status="PASS" starttime="20231201 21:22:40.469" endtime="20231201 21:22:41.756"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>${LoggedIn} == True</arg>
+<arg>Click Logout Button</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Click Logout Button" library="login_resources">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${SIDE_PREFERENCES}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20231201 21:22:41.757" endtime="20231201 21:22:42.036"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${SIDE_PREFERENCES}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231201 21:22:42.037" level="INFO">Clicking element '//body/div[@id='sidebar']/div[14]/label[1]'.</msg>
+<status status="PASS" starttime="20231201 21:22:42.036" endtime="20231201 21:22:42.074"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${TIMEOUT}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231201 21:22:43.074" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20231201 21:22:42.074" endtime="20231201 21:22:43.074"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${BUTTON_LOGOUT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231201 21:22:43.074" level="INFO">Clicking element '//li[@id='logoutBtn']'.</msg>
+<status status="PASS" starttime="20231201 21:22:43.074" endtime="20231201 21:22:43.133"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${TIMEOUT}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231201 21:22:44.134" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20231201 21:22:43.134" endtime="20231201 21:22:44.134"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${BUTTON_CONFIRM_LOGOUT}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231201 21:22:44.135" level="INFO">Clicking button 'confirmLogout'.</msg>
+<status status="PASS" starttime="20231201 21:22:44.134" endtime="20231201 21:22:44.422"/>
+</kw>
+<status status="PASS" starttime="20231201 21:22:41.757" endtime="20231201 21:22:44.422"/>
+</kw>
+<status status="PASS" starttime="20231201 21:22:41.757" endtime="20231201 21:22:44.422"/>
+</kw>
+<status status="PASS" starttime="20231201 21:22:38.431" endtime="20231201 21:22:44.422"/>
+</kw>
+<doc>Mencoba Testing Positive dengan data daniel</doc>
+<tag>Positive</tag>
+<status status="PASS" starttime="20231201 21:22:38.430" endtime="20231201 21:22:44.422"/>
+</test>
+<test id="s1-t2" name="Username benar dan password salah" line="17">
+<kw name="Login">
+<arg>${USERNAME_ACCOUNT}</arg>
 <arg>123</arg>
 <kw name="Input Username" library="login_resources">
 <arg>${username}</arg>
@@ -114,10 +190,10 @@
 <arg>${TEXTFIELD_USERNAME}</arg>
 <arg>${username}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231201 20:20:17.828" level="INFO">Typing text 'daniel' into text field 'username'.</msg>
-<status status="PASS" starttime="20231201 20:20:17.827" endtime="20231201 20:20:17.976"/>
+<msg timestamp="20231201 21:22:44.425" level="INFO">Typing text 'daniel' into text field 'username'.</msg>
+<status status="PASS" starttime="20231201 21:22:44.424" endtime="20231201 21:22:44.559"/>
 </kw>
-<status status="PASS" starttime="20231201 20:20:17.827" endtime="20231201 20:20:17.976"/>
+<status status="PASS" starttime="20231201 21:22:44.424" endtime="20231201 21:22:44.559"/>
 </kw>
 <kw name="Input Password" library="login_resources">
 <arg>${password}</arg>
@@ -125,73 +201,215 @@
 <arg>${TEXTFIELD_PASSWORD}</arg>
 <arg>${password}</arg>
 <doc>Types the given password into the text field identified by ``locator``.</doc>
-<msg timestamp="20231201 20:20:17.978" level="INFO">Typing password into text field 'password'.</msg>
-<msg timestamp="20231201 20:20:18.032" level="INFO">Temporally setting log level to: NONE</msg>
-<msg timestamp="20231201 20:20:18.106" level="INFO">Log level changed from NONE to INFO.</msg>
-<status status="PASS" starttime="20231201 20:20:17.977" endtime="20231201 20:20:18.107"/>
+<msg timestamp="20231201 21:22:44.560" level="INFO">Typing password into text field 'password'.</msg>
+<msg timestamp="20231201 21:22:44.605" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20231201 21:22:44.670" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20231201 21:22:44.560" endtime="20231201 21:22:44.670"/>
 </kw>
-<status status="PASS" starttime="20231201 20:20:17.977" endtime="20231201 20:20:18.107"/>
+<status status="PASS" starttime="20231201 21:22:44.559" endtime="20231201 21:22:44.670"/>
 </kw>
 <kw name="Click Login Button" library="login_resources">
 <kw name="Sleep" library="BuiltIn">
 <arg>${TIMEOUT}</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20231201 20:20:19.107" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20231201 20:20:18.107" endtime="20231201 20:20:19.107"/>
+<msg timestamp="20231201 21:22:45.671" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20231201 21:22:44.671" endtime="20231201 21:22:45.671"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>${BUTTON_LOGIN}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20231201 20:20:19.107" level="INFO">Clicking button 'Log in'.</msg>
-<status status="PASS" starttime="20231201 20:20:19.107" endtime="20231201 20:20:19.178"/>
+<msg timestamp="20231201 21:22:45.672" level="INFO">Clicking button 'Log in'.</msg>
+<status status="PASS" starttime="20231201 21:22:45.671" endtime="20231201 21:22:45.736"/>
 </kw>
-<status status="PASS" starttime="20231201 20:20:18.107" endtime="20231201 20:20:19.178"/>
+<status status="PASS" starttime="20231201 21:22:44.670" endtime="20231201 21:22:45.736"/>
 </kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${LoggedIn}</var>
+<arg>Verify Success Login</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Verify Success Login" library="login_resources">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${BUTTON_TOGGLE}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<msg timestamp="20231201 21:22:50.971" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20231201 21:22:50.971" level="FAIL">Element '//div[@id='toggle-btn']' not visible after 5 seconds.</msg>
+<status status="FAIL" starttime="20231201 21:22:45.737" endtime="20231201 21:22:50.974"/>
+</kw>
+<status status="FAIL" starttime="20231201 21:22:45.737" endtime="20231201 21:22:50.974"/>
+</kw>
+<msg timestamp="20231201 21:22:50.974" level="INFO">${LoggedIn} = False</msg>
+<status status="PASS" starttime="20231201 21:22:45.737" endtime="20231201 21:22:50.974"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>${LoggedIn} == True</arg>
+<arg>Verify Success Login</arg>
+<arg>ELSE</arg>
+<arg>Verify Invalid Login</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
 <kw name="Verify Invalid Login" library="login_resources">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${POPUP_FAILED}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20231201 20:20:19.178" endtime="20231201 20:20:19.442"/>
+<status status="PASS" starttime="20231201 21:22:50.975" endtime="20231201 21:22:51.011"/>
 </kw>
 <kw name="Page Should Contain" library="SeleniumLibrary">
 <arg>${MESSAGE_FAILED_LOGIN}</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<msg timestamp="20231201 20:20:19.461" level="INFO">Current page contains text 'Oops! Login failed. Try Again.'.</msg>
-<status status="PASS" starttime="20231201 20:20:19.442" endtime="20231201 20:20:19.461"/>
+<msg timestamp="20231201 21:22:51.033" level="INFO">Current page contains text 'Oops! Login failed. Try Again.'.</msg>
+<status status="PASS" starttime="20231201 21:22:51.011" endtime="20231201 21:22:51.033"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${BUTTON_CLOSE_POPUP_FAILED}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20231201 20:20:19.462" level="INFO">Clicking element '//span[@id='modal-close']'.</msg>
-<status status="PASS" starttime="20231201 20:20:19.461" endtime="20231201 20:20:19.523"/>
+<msg timestamp="20231201 21:22:51.034" level="INFO">Clicking element '//span[@id='modal-close']'.</msg>
+<status status="PASS" starttime="20231201 21:22:51.033" endtime="20231201 21:22:51.095"/>
 </kw>
-<status status="PASS" starttime="20231201 20:20:19.178" endtime="20231201 20:20:19.523"/>
+<status status="PASS" starttime="20231201 21:22:50.975" endtime="20231201 21:22:51.095"/>
 </kw>
-<status status="PASS" starttime="20231201 20:20:17.826" endtime="20231201 20:20:19.523"/>
+<status status="PASS" starttime="20231201 21:22:50.975" endtime="20231201 21:22:51.095"/>
 </kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>${LoggedIn} == True</arg>
+<arg>Click Sidebar Toggle</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20231201 21:22:51.095" endtime="20231201 21:22:51.096"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>${LoggedIn} == True</arg>
+<arg>Click Logout Button</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20231201 21:22:51.096" endtime="20231201 21:22:51.096"/>
+</kw>
+<status status="PASS" starttime="20231201 21:22:44.424" endtime="20231201 21:22:51.096"/>
+</kw>
+<tag>Negative</tag>
+<status status="PASS" starttime="20231201 21:22:44.423" endtime="20231201 21:22:51.096"/>
+</test>
+<test id="s1-t3" name="Username salah dan password salah" line="19">
+<kw name="Login">
+<arg>asd</arg>
+<arg>asd</arg>
+<kw name="Input Username" library="login_resources">
+<arg>${username}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${TEXTFIELD_USERNAME}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231201 21:22:51.100" level="INFO">Typing text 'asd' into text field 'username'.</msg>
+<status status="PASS" starttime="20231201 21:22:51.099" endtime="20231201 21:22:51.250"/>
+</kw>
+<status status="PASS" starttime="20231201 21:22:51.098" endtime="20231201 21:22:51.250"/>
+</kw>
+<kw name="Input Password" library="login_resources">
+<arg>${password}</arg>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>${TEXTFIELD_PASSWORD}</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20231201 21:22:51.252" level="INFO">Typing password into text field 'password'.</msg>
+<msg timestamp="20231201 21:22:51.315" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20231201 21:22:51.385" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20231201 21:22:51.251" endtime="20231201 21:22:51.385"/>
+</kw>
+<status status="PASS" starttime="20231201 21:22:51.250" endtime="20231201 21:22:51.385"/>
+</kw>
+<kw name="Click Login Button" library="login_resources">
+<kw name="Sleep" library="BuiltIn">
+<arg>${TIMEOUT}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231201 21:22:52.386" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20231201 21:22:51.385" endtime="20231201 21:22:52.386"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${BUTTON_LOGIN}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231201 21:22:52.386" level="INFO">Clicking button 'Log in'.</msg>
+<status status="PASS" starttime="20231201 21:22:52.386" endtime="20231201 21:22:52.470"/>
+</kw>
+<status status="PASS" starttime="20231201 21:22:51.385" endtime="20231201 21:22:52.470"/>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${LoggedIn}</var>
+<arg>Verify Success Login</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Verify Success Login" library="login_resources">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${BUTTON_TOGGLE}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<msg timestamp="20231201 21:22:57.717" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20231201 21:22:57.718" level="FAIL">Element '//div[@id='toggle-btn']' not visible after 5 seconds.</msg>
+<status status="FAIL" starttime="20231201 21:22:52.471" endtime="20231201 21:22:57.719"/>
+</kw>
+<status status="FAIL" starttime="20231201 21:22:52.470" endtime="20231201 21:22:57.719"/>
+</kw>
+<msg timestamp="20231201 21:22:57.719" level="INFO">${LoggedIn} = False</msg>
+<status status="PASS" starttime="20231201 21:22:52.470" endtime="20231201 21:22:57.719"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>${LoggedIn} == True</arg>
+<arg>Verify Success Login</arg>
+<arg>ELSE</arg>
+<arg>Verify Invalid Login</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Verify Invalid Login" library="login_resources">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${POPUP_FAILED}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231201 21:22:57.720" endtime="20231201 21:22:57.745"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>${MESSAGE_FAILED_LOGIN}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20231201 21:22:57.760" level="INFO">Current page contains text 'Oops! Login failed. Try Again.'.</msg>
+<status status="PASS" starttime="20231201 21:22:57.745" endtime="20231201 21:22:57.760"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${BUTTON_CLOSE_POPUP_FAILED}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231201 21:22:57.761" level="INFO">Clicking element '//span[@id='modal-close']'.</msg>
+<status status="PASS" starttime="20231201 21:22:57.760" endtime="20231201 21:22:57.811"/>
+</kw>
+<status status="PASS" starttime="20231201 21:22:57.720" endtime="20231201 21:22:57.812"/>
+</kw>
+<status status="PASS" starttime="20231201 21:22:57.719" endtime="20231201 21:22:57.812"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>${LoggedIn} == True</arg>
+<arg>Click Sidebar Toggle</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20231201 21:22:57.812" endtime="20231201 21:22:57.812"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>${LoggedIn} == True</arg>
+<arg>Click Logout Button</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20231201 21:22:57.812" endtime="20231201 21:22:57.813"/>
+</kw>
+<status status="PASS" starttime="20231201 21:22:51.098" endtime="20231201 21:22:57.813"/>
+</kw>
+<tag>Negative</tag>
+<status status="PASS" starttime="20231201 21:22:51.097" endtime="20231201 21:22:57.813"/>
+</test>
 <kw name="Close Browser" library="login_resources" type="TEARDOWN">
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20231201 20:20:19.524" endtime="20231201 20:20:21.722"/>
+<status status="PASS" starttime="20231201 21:22:57.815" endtime="20231201 21:23:00.271"/>
 </kw>
-<status status="PASS" starttime="20231201 20:20:19.523" endtime="20231201 20:20:21.722"/>
+<status status="PASS" starttime="20231201 21:22:57.815" endtime="20231201 21:23:00.271"/>
 </kw>
-<tag>Negative Test</tag>
-<status status="PASS" starttime="20231201 20:20:15.212" endtime="20231201 20:20:21.722"/>
-</test>
 <doc>Testing Login QMA Site</doc>
-<status status="PASS" starttime="20231201 20:20:07.379" endtime="20231201 20:20:21.723"/>
+<status status="PASS" starttime="20231201 21:22:35.208" endtime="20231201 21:23:00.271"/>
 </suite>
 <statistics>
 <total>
-<stat pass="2" fail="0" skip="0">All Tests</stat>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="1" fail="0" skip="0">Negative Test</stat>
-<stat pass="1" fail="0" skip="0">Positive Test</stat>
+<stat pass="2" fail="0" skip="0">Negative</stat>
+<stat pass="1" fail="0" skip="0">Positive</stat>
 </tag>
 <suite>
-<stat pass="2" fail="0" skip="0" id="s1" name="LoginQMA testcase">LoginQMA testcase</stat>
+<stat pass="3" fail="0" skip="0" id="s1" name="LoginQMA testsuite">LoginQMA testsuite</stat>
 </suite>
 </statistics>
 <errors>

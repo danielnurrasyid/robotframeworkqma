@@ -22,5 +22,6 @@ Login
     ...        Verify Success Login
     ...    ELSE IF    ${LoggedIn} == False
     ...        Verify Invalid Login
+    Run Keyword If    ${LoggedIn} == True    Click Sidebar Toggle
     Run Keyword If    ${LoggedIn} == True    Click Logout Button
 

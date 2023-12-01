@@ -41,7 +41,6 @@ Click Sidebar Toggle
     Verify my Profile
 
 Click Logout Button
-    Click Sidebar Toggle
     Scroll Element Into View    ${SIDE_PREFERENCES}
     Click Element    ${SIDE_PREFERENCES}
     Sleep    ${TIMEOUT}

@@ -7,14 +7,14 @@ Suite Teardown    login_resources.Close Browser
 Test Template    Login
 
 *** Variables ***
-${USERNAME}    daniel
-${PASSWORD}    daniel202103003
+${USERNAME_ACCOUNT}    daniel
+${PASSWORD_ACCOUNT}    daniel202103003
 
 *** Test Cases ***
-Username benar dan password benar    ${USERNAME}    ${PASSWORD}
+Username benar dan password benar    ${USERNAME_ACCOUNT}    ${PASSWORD_ACCOUNT}
     [Tags]    Positive
     [Documentation]    Mencoba Testing Positive dengan data daniel
-Username benar dan password salah    ${USERNAME}    123
+Username benar dan password salah    ${USERNAME_ACCOUNT}    123
     [Tags]    Negative
 Username salah dan password salah     asd    asd
     [Tags]    Negative 
@@ -30,4 +30,5 @@ Login
     ...        Verify Success Login
     ...    ELSE    
     ...        Verify Invalid Login
+    Run Keyword If    ${LoggedIn} == True    Click Sidebar Toggle
     Run Keyword If    ${LoggedIn} == True    Click Logout Button

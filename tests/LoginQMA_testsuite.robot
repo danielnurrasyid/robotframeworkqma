@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation    Testing Login QMA Site
 Library    SeleniumLibrary
-Resource    ../resources/login_resources.robot
+Resource    ../resources/keywords/login_resources.robot
 Suite Setup    Open My Browser
 Suite Teardown    login_resources.Close Browser
 Test Template    Login

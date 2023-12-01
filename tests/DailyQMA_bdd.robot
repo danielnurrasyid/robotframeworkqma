@@ -1,8 +1,8 @@
 *** Settings ***
 Library    SeleniumLibrary
 #Library    AutoRecorder
-Resource    ../resources/login_resources.robot
-Resource    ../resources/mytracker_resources.robot
+Resource    ../resources/keywords/login_resources.robot
+Resource    ../resources/keywords/mytracker_resources.robot
 
 *** Variables ***
 ${USERNAME}    daniel

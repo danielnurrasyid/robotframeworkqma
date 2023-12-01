@@ -3,7 +3,7 @@ Documentation    Testing Login QMA Site
 Library    SeleniumLibrary
 #Library    AutoRecorder    mode=suite
 Library    DataDriver    file=../test_data/Login.csv    sheet_name=Login
-Resource    ../resources/login_resources.robot
+Resource    ../resources/keywords/login_resources.robot
 Suite Setup    Open My Browser
 Suite Teardown    login_resources.Close Browser
 Test Template    Login

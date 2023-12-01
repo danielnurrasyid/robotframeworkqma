@@ -1,7 +1,7 @@
 *** Settings ***
 Library    SeleniumLibrary
-Resource    ../resources/login_resources.robot
-Resource    ../resources/mytracker_variables.robot
+Resource    ../keywords/login_resources.robot
+Resource    ../variables/mytracker_variables.robot
 
 *** Variables ***
 

@@ -1,6 +1,6 @@
 *** Settings ***
 Library    SeleniumLibrary
-Resource    ../resources/login_variables.robot
+Resource    ../variables/login_variables.robot
 
 *** Keywords ***
 Open My Browser

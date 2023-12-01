@@ -33,8 +33,8 @@ Click Login Button
     Click Button    ${BUTTON_LOGIN}
 
 Click Logout Button
-    Scroll Element Into View    //body/div[1]/div[13]/label[1]
-    Click Element    //body/div[1]/div[13]/label[1]
+    Scroll Element Into View    //img[@src='/testingqa/images?filename=preferences.png' and @alt='Item last Icon' and @class='item-icon']
+    Click Element    //img[@src='/testingqa/images?filename=preferences.png' and @alt='Item last Icon' and @class='item-icon']
     Sleep    ${TIMEOUT}
     Click Element    //a[contains(text(),'Log out')]
     Sleep    ${TIMEOUT}

@@ -1,13 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1.1 (Python 3.12.0 on win32)" generated="20231127 13:17:49.305" rpa="false" schemaversion="4">
+<robot generator="Robot 6.1.1 (Python 3.12.0 on win32)" generated="20231128 12:24:49.070" rpa="false" schemaversion="4">
 <suite id="s1" name="Robot Interactive Console" source="c:\Users\User\.vscode\extensions\robocorp.robotframework-lsp-1.11.0\src\robotframework_ls\vendored\robotframework_interactive\robot_interactive_console.robot">
 <test id="s1-t1" name="Default Task/Test" line="5">
 <kw name="Interpreter Main Loop" library="MainLoop">
-<status status="PASS" starttime="20231127 13:17:49.335" endtime="20231127 13:17:53.194"/>
+<kw name="daniel">
+<arg>daniel202103003</arg>
+<msg timestamp="20231128 12:24:49.598" level="FAIL">No keyword with name 'daniel' found.</msg>
+<status status="FAIL" starttime="20231128 12:24:49.598" endtime="20231128 12:24:49.598"/>
 </kw>
-<status status="PASS" starttime="20231127 13:17:49.335" endtime="20231127 13:17:53.194"/>
+<status status="PASS" starttime="20231128 12:24:49.092" endtime="20231128 12:25:04.399"/>
+</kw>
+<status status="PASS" starttime="20231128 12:24:49.091" endtime="20231128 12:25:04.400"/>
 </test>
-<status status="PASS" starttime="20231127 13:17:49.305" endtime="20231127 13:17:53.194"/>
+<status status="PASS" starttime="20231128 12:24:49.071" endtime="20231128 12:25:04.401"/>
 </suite>
 <statistics>
 <total>

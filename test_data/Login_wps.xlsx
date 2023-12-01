@@ -1,0 +1,4 @@
+${TESTCASE}	${UserNAMEs}	${Psswrd}	[Tags]	[Documentation]
+Username benar dan password benar	daniel	daniel202103003	Positive	dokumentasi1
+Username benar dan password salah	daniel	asd	Negative	dokumentasi2
+Username salah dan password salah	asd	asd	Negative	dokumentasi3

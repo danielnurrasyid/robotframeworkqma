@@ -23,11 +23,11 @@ ${VALUE_STATUS_WFO}    1
 ${VALUE_PROJECT_NEXMILE}    22
 ${VALUE_FORM_DAILY}    1
 
-${VALUE_CHECKIN_DATE}    16/01/2022
+${VALUE_CHECKIN_DATE}    22/01/2022
 ${VALUE_YESTERDAY_TASK}    
-...    Insert Daily ${\n}
-...    Click Button ${\n}
-...    asdasdasd
+...    - Farmindo ${\n}
+...    - Nexmile ${\n}
+...    - Done Testing
 ${VALUE_TODAY_TASK}    Nexmile
 ${VALUE_BLOCKER_TASK}    Tidak ada
 
@@ -95,6 +95,3 @@ Insert Daily
     Insert Today Task
     Insert Blocker Task
     Click Submit Daily
-    Verify Success Submit Daily
-    Click Logout Button
-    login_resources.Close Browser
